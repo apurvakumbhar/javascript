@@ -1,112 +1,109 @@
-//Activity 01:Const ,let,var difference
-//const example
+const output = document.getElementById("output");
+
+// Simple display function (NO lines, NO styling)
+function display(title, content) {
+    output.innerHTML += "<b>" + title + "</b><br>";
+    output.innerHTML += content + "<br><br>";
+}
+
+// ----------------------
+// Activity 01
+// ----------------------
 const z = 10;
-//z=20;  //re assignment not allowed
-console.log("const z:",z);
-document.write("const z: " + z + "<br>");
+let y = 20;
+var x = 30;
 
-//let example
-let y=10;
-y=20; //re assignment allowed 
-//let y=30; //re declaration not allowed
-console.log("let y:",y);
-document.write("const y: " + y + "<br>");
+display("Activity 01: Const, Let, Var Example",
+    "const z = " + z + "<br>" +
+    "let y = " + y + "<br>" +
+    "var x = " + x);
 
+console.log("Activity 01");
+console.log("const z =", z);
+console.log("let y =", y);
+console.log("var x =", x);
 
-//var example
-var x=10;
-var x=20;//re assignment allowed
-x=30;//re declaration allowed
-console.log("var x:",x);
-document.write("const x: " + x + "<br>");
-
-
-//Activity 02:Const ,let,var :use of block of scope
-
+// ----------------------
+// Activity 02
+// ----------------------
 {
-    var x=10;
+    var a = 100;
 }
-console.log(x); //var is not block scoped
-document.write("const x: " + x + "<br>");
-
-
 {
-    const y=40;
-    console.log(y);//works
-    document.write("const y: " + y + "<br>");
-
+    let b = 200;
 }
-//console.log(y);//const is block scoped (it will not works outside the block)
-
 {
-    let z=50;
-    console.log(z);//works
-    document.write("const z: " + z + "<br>");
-
-}
-//console.log(z);//let is block scoped (it will not works outside the block)
-
-//Activity 03:Display student information.
-console.log("Student's information:");
-document.write("Student's information: "+ "<br>");
-
-let firstName=prompt("Enter First name of student:");
-console.log(firstName);
-document.write("Enter First name of student:"+firstName + "<br>");
-
-let lastName=prompt("Enter last name of student:")
-console.log(lastName);
-document.write("Enter last name of student: " +lastName + "<br>");
-
-console.log("Full name:",firstName+lastName);
-document.write("Enter full name of student: "+ firstName+lastName + "<br>");
-
-let age=Number(prompt("Student's age:"));
-console.log(age);
-document.write("Enter age of student: " +age + "<br>");
-
-let rollNo=Number(prompt("Student's roll No.:"))
-console.log(rollNo);
-document.write("Enter roll no. of student: " +rollNo + "<br>");
-
-
-//Activity 04:Check the number is even or odd;
-let num=prompt("Enter number:");
-console.log(num);
-document.write("Enter number: " +num + "<br>");
-
-if(num%2 == 0)
-{
-    console.log("Number is even.");
-    document.write("Number is even "+ "<br>");
-
-}
-else{
-    console.log("Number is odd.");
-    document.write("Numbar is odd "+ "<br>");
-
+    const c = 300;
 }
 
-//Activity 05:Check student is pass or fail.
-let name=prompt("Enter student name:");
-console.log(name);
-document.write("Enter  name of student: " +name + "<br>");
+display("Activity 02: Block Scope Example",
+    "var a = " + a + " (Accessible outside block)<br>" +
+    "let b and const c are block scoped");
 
-let marks=Number(prompt("Enter marks of student:"));
-console.log(marks);
-document.write("Enter marks of student: " +marks + "<br>");
+console.log("Activity 02");
+console.log("var a =", a);
+console.log("let and const are block scoped");
 
-if(marks<35)
-{
-    console.log("Pass");
+// ----------------------
+// Activity 03
+// ----------------------
+let firstName = prompt("Enter First Name:");
+let lastName = prompt("Enter Last Name:");
+let age = Number(prompt("Enter Age:"));
+let rollNo = Number(prompt("Enter Roll Number:"));
+
+display("Activity 03: Student Information",
+    "Full Name: " + firstName + " " + lastName + "<br>" +
+    "Age: " + age + "<br>" +
+    "Roll No: " + rollNo);
+
+console.log("Activity 03");
+console.log("Full Name:", firstName, lastName);
+console.log("Age:", age);
+console.log("Roll No:", rollNo);
+
+// ----------------------
+// Activity 04
+// ----------------------
+let num = Number(prompt("Enter a Number:"));
+let result = (num % 2 === 0) ? "Even" : "Odd";
+
+display("Activity 04: Even or Odd Check",
+    "Number: " + num + "<br>" +
+    "Result: " + result);
+
+console.log("Activity 04");
+console.log("Number:", num);
+console.log("Result:", result);
+
+// ----------------------
+// Activity 05
+// ----------------------
+let studentName = prompt("Enter Student Name:");
+let marks = Number(prompt("Enter Marks:"));
+let status = (marks >= 35) ? "Pass" : "Fail";
+
+display("Activity 05: Pass or Fail Result",
+    "Name: " + studentName + "<br>" +
+    "Marks: " + marks + "<br>" +
+    "Status: " + status);
+
+console.log("Activity 05");
+console.log("Name:", studentName);
+console.log("Marks:", marks);
+console.log("Status:", status);
+
+// ----------------------
+// Activity 06
+// ----------------------
+let numbers = "";
+for (let i = 1; i <= 10; i++) {
+    numbers += i + " ";
 }
-else
-{
-    console.log("Fail");
-}
 
-//Activity 06:Display numbers .
-for(let i=1;i<=10;i++){
+display("Activity 06: Numbers from 1 to 10", numbers);
+
+console.log("Activity 06");
+for (let i = 1; i <= 10; i++) {
     console.log(i);
-    document.write(+ i + "<br>");
 }

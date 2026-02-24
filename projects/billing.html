@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Self Service Billing</title>
+</head>
+<body>
+
+<h2>Self Service Billing Counter</h2>
+
+<h3>Select Items:</h3>
+
+<button onclick="addItem('Rice')">Rice ₹60</button>
+<button onclick="addItem('Sugar')">Sugar ₹50</button>
+<button onclick="addItem('Milk')">Milk ₹28</button>
+<button onclick="addItem('Soap')">Soap ₹30</button>
+<button onclick="addItem('Maggi')">Maggi ₹14</button>
+<button onclick="addItem('Chocolate')">Chocolate ₹30</button>
+
+<br><br>
+
+<button onclick="finishBilling()"> Generate Bill</button>
+
+<h3 id="result"></h3>
+
+<script src="billing.js"></script>
+
+</body>
+</html>
