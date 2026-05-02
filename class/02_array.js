@@ -41,5 +41,3 @@ console.log(Array.of(score1,score2,score3))//create new array from given value n
 //Imp(interview):diff bet :Arrayof->convert value,arrayfrom-->converts interable
 
 //fun,string,basic array--->oral
-
-

@@ -1,0 +1,23 @@
+<div class="container">
+
+  <h1>📝 Notes App</h1>
+
+  <input [(ngModel)]="note" placeholder="Enter note" />
+
+  <button (click)="addNote()">
+    {{ editIndex === -1 ? 'Add' : 'Update' }}
+  </button>
+
+  <hr>
+
+  <ul>
+    <li *ngFor="let n of notes; let i = index">
+      {{ n }}
+      <span>
+        <button (click)="editNote(i)">Edit</button>
+        <button (click)="deleteNote(i)">Delete</button>
+      </span>
+    </li>
+  </ul>
+
+</div>

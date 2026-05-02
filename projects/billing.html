@@ -1,28 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Self Service Billing</title>
+    <title>GlowCart - Beauty Billing</title>
+    <link rel="stylesheet" href="billing.css">
 </head>
 <body>
 
-<h2>Self Service Billing Counter</h2>
+<div id="welcomePage" class="page active welcome-bg">
+    <div class="overlay">
+        <h1>✨GlowCart Beauty Store</h1>
+        <p>Premium Beauty & Skincare Products</p>
+        <button id="startBtn" class="primary-btn">Start Shopping</button>
+    </div>
+</div>
 
-<h3>Select Items:</h3>
+<div id="billingPage" class="page billing-bg">
 
-<button onclick="addItem('Rice')">Rice ₹60</button>
-<button onclick="addItem('Sugar')">Sugar ₹50</button>
-<button onclick="addItem('Milk')">Milk ₹28</button>
-<button onclick="addItem('Soap')">Soap ₹30</button>
-<button onclick="addItem('Maggi')">Maggi ₹14</button>
-<button onclick="addItem('Chocolate')">Chocolate ₹30</button>
+    <div class="billing-container">
 
-<br><br>
+        <h2> Billing Counter</h2>
 
-<button onclick="finishBilling()"> Generate Bill</button>
+        <button id="loadBtn" class="secondary-btn">Load Products</button>
 
-<h3 id="result"></h3>
+        <div id="error"></div>
+
+        <!-- Products -->
+        <div id="products" class="product-grid"></div>
+
+        <div class="invoice-section">
+
+            <h3>Invoice</h3>
+            
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Qantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="billBody"></tbody>
+            </table>
+
+            <h3 id="finalTotal">Total: ₹0</h3>
+
+            <button id="generateBtn" class="primary-btn">Generate Final Bill</button>
+            <button id="resetBtn" class="secondary-btn">Reset Billing</button>
+            <div id="result"></div>
+
+        </div>
+
+    </div>
+
+</div>
 
 <script src="billing.js"></script>
-
 </body>
 </html>

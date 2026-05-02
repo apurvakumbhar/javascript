@@ -1,23 +1,85 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Simple Button Voting</title>
+    <title>Simple Voting System</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            text-align: center;
+            padding: 40px;
+            color: white;
+        }
+
+        .box {
+            background: white;
+            color: black;
+            width: 350px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 8px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .vote-btn {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .vote-btn:active {
+            background-color: #2ecc71;
+        }
+
+        .result-btn {
+            background-color: #27ae60;
+            color: white;
+        }
+
+        .reset-btn {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    </style>
 </head>
+
 <body>
 
-<h2>Simple Voting System</h2>
+<div class="box">
+    <h2>Voting System</h2>
 
-<button onclick="vote('Alice')">Vote Alice</button>
-<button onclick="vote('Bob')">Vote Bob</button>
-<button onclick="vote('Charlie')">Vote Charlie</button>
+    <button class="vote-btn" onclick="vote('Alice')">Vote Alice</button>
+    <button class="vote-btn" onclick="vote('Bob')">Vote Bob</button>
+    <button class="vote-btn" onclick="vote('Charlie')">Vote Charlie</button>
 
-<br><br>
+    <br><br>
 
-<button onclick="finishVoting()">Finish Election</button>
+    <button class="result-btn" onclick="showResult()">Show Result</button>
+    <button class="reset-btn" onclick="resetVotes()">Reset</button>
 
-<p id="result"></p>
+    <div id="result"></div>
+</div>
 
-<script src="voting_system.js"></script>
+<script src="voting.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,254 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI';
+}
+
+/* Welcome */
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  position: relative;   
+
+  background: url("https://img.freepik.com/free-photo/houseplants-border-wooden-white-background_53876-128835.jpg?semt=ais_hybrid&w=740&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+
+.title {
+  position: relative;
+  z-index: 1;
+  font-size: 60px;
+  color: #006400;  
+  text-align: center;
+  font-weight: bold;
+  font-weight: 800;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Search Page */
+.search-bg {
+  background: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6");
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-box input {
+  padding: 20px;
+  font-size: 24px;
+  width: 400px;
+  border-radius: 30px;
+  border: none;
+}
+
+.search-box button {
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 30px;
+  background: green;
+  color: white;
+  margin-left: 10px;
+}
+.search-box {
+  transform: translateY(-80px);
+}
+
+/* Result */
+#result {
+  text-align: left;
+  max-width: 1500px;
+  margin: auto;
+}
+
+img {
+  width: 200px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+/* Buy Page */
+.buy-page {
+  background: linear-gradient(to right, green, lightgreen);
+  text-align: center;
+  padding-top: 100px;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+.result-bg {
+    background: url("https://static.vecteezy.com/system/resources/thumbnails/006/745/450/small/hand-painted-illustration-of-abstract-green-leaf-nature-background-with-copyspace-vector.jpg");
+    background-size: cover;
+  background-position: center;
+}
+
+.card {
+  width: 100%;              
+  margin: 35px auto;
+  padding: 35px;
+  color: black;   
+}
+
+.card h3, .card p, .card li {
+  color: black;
+}
+.card h1 {
+  font-size: 80px;
+  font-weight: 900;
+}
+
+.card h3 {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.card p {
+  font-size: 45px;
+  font-weight: 500;
+}
+
+.card li {
+  font-size: 28px;
+  line-height: 1.8;
+}
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.images img {
+  width: 180px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.top-section {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  margin-bottom: 30px;
+  gap: 40px;              
+}
+
+/* LEFT TEXT */
+.top-section h1 {
+  font-size: 45px;
+  color: #00ff88;
+}
+
+/* RIGHT IMAGE */
+.main-img {
+  width: 260px;         
+  border-radius: 20px;
+  box-shadow: 0 0 15px black;
+}
+
+/* REMOVE DOTS */
+.steps {
+  list-style: none;
+  padding: 0;
+}
+
+/* ENVIRONMENT */
+.check {
+  display: block;
+  margin: 8px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.check input {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+/* BUTTONS */
+.choice button {
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 20px;
+  border: none;
+  background: green;
+  color: white;
+  cursor: pointer;
+}
+
+.choice button:hover {
+  background: darkgreen;
+}
+
+#buy button {
+  padding: 15px 28px;
+  border-radius: 28px;
+  background: orange;
+  color: white;
+  font-size: 21px;
+  border: none;
+  margin-top: 18px;
+}
+
+
+.buy-bg {
+ background: url("https://arizent.brightspotcdn.com/dims4/default/b4a2e89/2147483647/strip/true/crop/3678x2069+753+0/resize/1280x720!/quality/90/?url=https://source-media-brightspot.s3.us-east-1.amazonaws.com/be/0d/1525151b465698e0708d558b3035/grow.jpeg");
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buy-card {
+  text-align: center;
+  color: black;
+}
+
+.buy-card h1 {
+  font-size: 60px;
+}
+
+.buy-card h2 {
+  font-size: 40px;
+}
+
+.quote {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+#buy button {
+  margin: 10px;
+}
+
+#buy button:last-child {
+  background: gray;
+}
+
+.buy-card p {
+  font-size: 20px;
+  margin: 5px;
+}
+
+.buy-card h2 {
+  margin-bottom: 20px;
+}
+
+input[type="number"] {
+  padding: 8px;
+  width: 60px;
+  border-radius: 8px;
+  margin: 10px;
+}

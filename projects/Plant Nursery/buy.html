@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Buy Plant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="buy-bg">
+
+<div class="buy-card" id="final"></div>
+
+<script>
+if (window.location.pathname.includes("buy")) {
+
+  fetch("/api/cart")
+    .then(res => res.json())
+    .then(cart => {
+
+      let total = 0;
+
+      let itemsHTML = cart.map(item => {
+        let itemTotal = item.price * item.quantity;
+        total += itemTotal;
+
+        return `<p>${item.name} × ${item.quantity} = ₹${itemTotal}</p>`;
+      }).join("");
+
+      const quotes = [
+        "🌿 Plants are the earth’s endless effort to speak to the listening heart.",
+        "🌱 Grow plants, grow peace.",
+        "🌼 Every plant is a promise of tomorrow.",
+        "🌳 A single plant can change the atmosphere of your life.",
+        "🌸 Happiness blooms where plants grow.",
+        "🌿 Take care of plants, they take care of you.",
+        "🌱 Plant a seed today, enjoy the shade tomorrow.",
+        "🌼 Nature never goes out of style.",
+        "🌳 Life begins the day you start a garden.",
+        "🌸 Small plants, big happiness.",
+        "🌿 Green is not just a color, it is a lifestyle.",
+        "🌱 Love grows here.",
+        "🌼 Plants make people happy.",
+        "🌳 The garden is a love song to the earth.",
+        "🌸 Grow through what you go through.",
+        "🌿 Caring for plants is caring for life.",
+        "🌱 Let nature nurture your soul.",
+        "🌼 In a world full of chaos, be like a plant and stay rooted.",
+        "🌳 Keep planting, keep growing.",
+        "🌸 Where flowers bloom, so does hope."
+      ];
+
+      const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+      document.getElementById("final").innerHTML = `
+        <h1>🧾 Your Bill</h1>
+        ${itemsHTML}
+        <h2>Total: ₹${total}</h2>
+        <h2>Thank You 🌱</h2>
+        <p>${randomQuote}</p>
+      `;
+
+      // ✅ CLEAR CART FROM SERVER AFTER BILL
+      fetch("/api/cart", { method: "DELETE" });
+
+    });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+/* 🌟 Page styling */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  margin: 0;
+  padding: 0;
+}
+
+/* 🌟 Container */
+.container {
+  width: 400px;
+  margin: 50px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* 🌟 Heading */
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* 🌟 Input */
+input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* 🌟 Add button */
+button {
+  padding: 10px 15px;
+  margin-left: 5px;
+  border: none;
+  background: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+/* 🌟 Notes list */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* 🌟 Each note */
+li {
+  background: #f9f9f9;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 🌟 Edit & Delete buttons */
+li button {
+  margin-left: 5px;
+  background: #2196F3;
+}
+
+li button:last-child {
+  background: #f44336;
+}
+
+li button:hover {
+  opacity: 0.8;
+}

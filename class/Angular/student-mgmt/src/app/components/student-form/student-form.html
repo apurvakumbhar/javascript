@@ -1,0 +1,16 @@
+<h2>Add Student</h2>
+
+<input [(ngModel)]="name" placeholder="Enter Name">
+<input [(ngModel)]="course" placeholder="Enter Course">
+<input [(ngModel)]="roll" type="number" placeholder="Enter Roll No">
+<input [(ngModel)]="division" placeholder="Enter Division">
+
+<button (click)="addStudent()">Add</button>
+
+<h3>Student List</h3>
+
+<ul>
+  <li *ngFor="let s of students">
+    {{s.name}} - {{s.course}} | Roll: {{s.roll}} | Div: {{s.division}}
+  </li>
+</ul>

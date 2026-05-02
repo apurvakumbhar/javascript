@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Plant Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="result-bg">
+
+<div class="card" id="result"></div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+
+<script>
+const plant = JSON.parse(localStorage.getItem("plant"));
+
+let steps = plant.steps.map(s => `<li>${s}</li>`).join("");
+
+let env = plant.environment
+  .filter(e => e !== "Water") 
+  .map(e =>
+    `<label class="check">
+      <input type="checkbox" class="env">
+      <span>${e}</span>
+    </label>`
+  ).join("");
+
+document.getElementById("result").innerHTML = `
+  <div class="top-section">
+  <h1>${plant.name}</h1>
+  <img src="${plant.image}" class="main-img"
+       onerror="this.src='https://via.placeholder.com/200'">
+</div>
+
+
+  <h3>🌱 Growing Steps</h3>
+  <ul class="steps">${steps}</ul>
+
+  <p class="water"><b>Water Requirement:</b> ${plant.water}</p>
+
+  <h3>✅ Tick if you have following requirements</h3>
+  <h1 class="env-box">${env}</h1>
+
+  <h3>🤔 Are you really able to grow this plant?</h3>
+  <div class="choice">
+    <button onclick="checkGrow(${plant.price}, true)">Yes</button>
+    <button onclick="checkGrow(${plant.price}, false)">No</button>
+  </div>
+
+  <h3>Quantity:</h3>
+<input type="number" id="qty" value="1" min="1">
+  <div id="buy"></div>
+`;
+</script>
+
+</body>
+</html>

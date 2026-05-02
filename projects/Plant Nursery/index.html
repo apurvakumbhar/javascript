@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Plant Nursery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="welcome">
+
+  <div class="title">🌱 Smart Plant Nursery</div>
+
+<script>
+  setTimeout(() => {
+    window.location.href ="/search";
+  }, 2500);
+</script>
+<script>
+  if (!localStorage.getItem("sessionStarted")) {
+    localStorage.setItem("sessionStarted", "true");
+  }
+</script>
+
+</body>
+</html>

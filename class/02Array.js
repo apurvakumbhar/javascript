@@ -22,7 +22,6 @@ const arr3=arr1.flat(1);
 console.log(arr3);
 
 //how the nested array specifies ,how did the array should be flattened
-//flattened all levels no matter how we
 //flat does not change original array it returns new array useful when working with nested data 
 
 //datascripting using this methods

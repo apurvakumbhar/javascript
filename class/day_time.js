@@ -16,14 +16,3 @@ console.log(myDate.getFullYear());
 let timeStamp=Date.now;
 console.log(Date.now());
 console.log(Date.now()/1000);
-
-
-
-
-
-
-
-
-
-
-
