@@ -57,7 +57,7 @@ if (window.location.pathname.includes("buy")) {
         <p>${randomQuote}</p>
       `;
 
-      // ✅ CLEAR CART FROM SERVER AFTER BILL
+      // CLEAR CART FROM SERVER AFTER BILL
       fetch("/api/cart", { method: "DELETE" });
 
     });

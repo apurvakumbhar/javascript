@@ -7,7 +7,6 @@ const PORT = 3000;
 /*  MIDDLEWARE  */
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
 app.use(express.static(path.join(__dirname)));
 
 let cart = [];
